@@ -1,0 +1,19 @@
+public static void goAndReadTheFile(){
+
+    try {
+        FileInputStream fis = new FileInputStream("src/day27exception/File01.txt");
+        
+        int k = 0;
+        
+        while( (k=fis.read()) != -1){
+            System.out.println((char)k);
+        }
+        
+
+    } catch (FileNotFoundException e) {
+
+        System.out.println("There is an issue about reaching out the file or existence of the file ==> " + e.getMessage());
+    }
+
+
+}
